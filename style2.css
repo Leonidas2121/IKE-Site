@@ -1,0 +1,226 @@
+:root {
+  --bg: #f3f4f6;       /* ανοιχτό γκρι για όλη τη σελίδα */
+  --ink: #000;         /* βασικό κείμενο */
+  --muted: #6b7280;    /* δευτερεύον κείμενο */
+  --line: #d1d5db;     /* απαλή γραμμή/περίγραμμα */
+  --brand: #1e3a8a;    /* σκούρο μπλε για active */
+  --hover: #374151;    /* γκρι-μαύρο για hover */
+}
+
+html { scroll-behavior:smooth }
+* { box-sizing:border-box }
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+
+}
+
+
+/* --- Κεντρικό container --- */
+.container {
+  max-width:980px;
+  margin-inline:auto;
+  padding:24px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  text-align: center;
+  background: #000;   /* μαύρο μόνο για τα κουμπιά */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 0; /* μηδέν padding */
+}
+
+/* --- Brand πάνω από το navbar --- */
+.brand-center {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 0;
+  background: var(--bg); /* ίδιο με το main */
+  color: var(--ink);     /* μαύρο κείμενο */
+  border-bottom: 1px solid var(--line); /* λεπτή γραμμή για διαχωρισμό */
+}
+
+/* --- Links στη μπάρα πλοήγησης --- */
+.nav-bar-links {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-links a {
+  flex: 1;
+  text-align: center;
+  background: #000;       /* μαύρο default */
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 0;
+  font-weight: 600;
+  transition: background 0.2s;
+  border-right: 1px solid #333;
+}
+
+.nav-bar-links a:last-child { border-right: none; }
+
+.nav-bar-links a:hover {
+  background: var(--hover);   /* πιο ανοιχτό γκρι-μαύρο */
+}
+
+.nav-bar-links a.active {
+  background: var(--brand);   /* σκούρο μπλε */
+}
+
+/* --- Τίτλοι και υπότιτλοι (από το παλιό CSS) --- */
+h1 {
+  font-size: clamp(24px,3.5vw,34px);
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(18px,2.6vw,24px);
+  margin: 32px 0 10px;
+}
+
+p.lead {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+/* --- Κουτιά / κάρτες --- */
+.card {
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  margin: 20px 0;
+}
+
+/* --- Γραμμές πληροφοριών (info-row) --- */
+.info-row {
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:14px;
+  padding:12px 0;
+  border-top:1px solid var(--line);
+}
+
+.info-row:first-child { border-top:0; }
+.term { font-weight:600; }
+.muted { color:var(--muted); }
+
+dl { margin:0; }
+dt { font-weight:600; }
+dd { margin:4px 0 0; }
+
+/* --- Κουμπί Εκτύπωσης --- */
+.print-btn {
+  appearance:none;
+  border:1px solid var(--brand);
+  color:#fff;
+  background:var(--brand);
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+@media print {
+  header, .print-btn { display:none; }
+  body { font-size:12pt; }
+  .card { box-shadow:none; }
+}
+
+/* --- Πίνακες (Εταίροι & Δραστηριότητες) --- */
+.partners-table table,
+.activities-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.partners-table th,
+.partners-table td,
+.activities-table th,
+.activities-table td {
+  border: 1px solid var(--line);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.partners-table th,
+.activities-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.partners-table tr:nth-child(even),
+.activities-table tr:nth-child(even) {
+  background: #f3f4f6;
+}
+
+/* --- Προαιρετικά tags (αν χρησιμοποιήσεις) --- */
+.tag {
+  display:inline-block;
+  padding:4px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:14px;
+}
+
+/* --- Γρήγορη πλοήγηση --- */
+.home-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-links li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #000;           /* μαύρο background */
+  color: #fff;                /* λευκό κείμενο */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-links li a:hover {
+  background: var(--brand);   /* σκούρο μπλε */
+  transform: translateX(4px); /* μικρή κίνηση δεξιά */
+}
+
+.home-links li a span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* --- Footer --- */
+/* Footer */
+footer {
+  background: #000;        /* μαύρο background */
+  color: #fff;             /* άσπρο κείμενο */
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  position: static;        /* αλλάζουμε από fixed σε static */
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* απλώνεται σε όλο το πλάτος */
+  margin-top: 30px;        /* λίγο κενό πάνω από το footer */
+}
+
+

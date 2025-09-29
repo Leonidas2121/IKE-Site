@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ΙΚΕ – Στοιχεία Εταίρων</title>
+  <meta name="description" content="Στοιχεία Εταίρων της ΙΚΕ σύμφωνα με τις υποχρεώσεις δημοσιότητας.">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <!-- Brand και Navbar -->
+  <header class="navbar">
+    <div class="brand-center">
+      L M ΑΝΑΚΑΙΝΙΣΗ ΚΑΤΑΣΚΕΥΗ
+    </div>
+    <nav aria-label="Κύρια πλοήγηση" class="nav-bar-links">
+      <a href="index.html">Αρχική</a>
+      <a href="company.html">Στοιχεία Εταιρείας</a>
+      <a class="active" href="partners.html">Στοιχεία Εταίρων</a>
+      <a href="activities.html">Δραστηριότητες</a>
+    </nav>
+  </header>
+
+  <!-- Κύριο περιεχόμενο -->
+  <main class="container">
+
+    <!-- Εταίροι -->
+    <section class="card" aria-labelledby="partners">
+      <h2 id="partners">Στοιχεία Εταίρων</h2>
+      <div class="partners-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ΑΦΜ Μέλους/Εταίρου</th>
+              <th>Υπηρεσία Μέλους/Εταίρου</th>
+              <th>Ονοματεπώνυμο / Επωνυμία</th>
+              <th>Ημ/νία Έναρξης</th>
+              <th>Ποσοστό Συμμετοχής</th>
+              <th>Είδος Συμμετοχής</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>119627543</td>
+              <td>ΚΕΦΟΔΕ ΑΤΤΙΚΗΣ</td>
+              <td>LENA MENTOR</td>
+              <td>25/09/2025</td>
+              <td>100%</td>
+              <td>ΜΕΛΟΣ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Κουμπί Εκτύπωση -->
+      <div style="margin-top:18px">
+        <button class="print-btn" onclick="window.print()">Εκτύπωση / Αποθήκευση σε PDF</button>
+      </div>
+    </section>
+
+    <!-- Τελευταία ενημέρωση -->
+    <section class="card" aria-labelledby="last-update" style="margin-top:16px">
+      <h2 id="last-update">Τελευταία ενημέρωση</h2>
+      <p class="muted">Η σελίδα ενημερώθηκε στις <time id="lastUpdated" datetime="">—</time>.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+     © 2025 L M ΑΝΑΚΑΙΝΙΣΗ ΚΑΤΑΣΚΕΥΗ ΙΚΕ
+  </footer>
+
+  <script>
+    // Συμπλήρωση "τελευταίας ενημέρωσης"
+    const t = new Date();
+    const el = document.getElementById('lastUpdated');
+    if(el){
+      el.dateTime = t.toISOString();
+      el.textContent = t.toLocaleDateString('el-GR',{day:'2-digit', month:'2-digit', year:'numeric'});
+    }
+  </script>
+</body>
+</html>
