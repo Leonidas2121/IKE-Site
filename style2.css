@@ -208,6 +208,8 @@ dd { margin:4px 0 0; }
   font-weight: bold;
 }
 
+
+
 /* --- Footer --- */
 /* Footer */
 footer {
@@ -222,5 +224,34 @@ footer {
   width: 100%;             /* απλώνεται σε όλο το πλάτος */
   margin-top: 30px;        /* λίγο κενό πάνω από το footer */
 }
+
+/* Responsive table styles */
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+    font-size: 0.95em;
+    table-layout: fixed;
+    word-break: break-word;
+  }
+  th, td {
+    padding: 8px 4px;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .table-responsive {
+    overflow-x: auto;
+    display: block;
+  }
+  .grid {
+    display: block;
+  }
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 10px 0;
+    word-break: break-word;
+  }
+}
+
 
 
