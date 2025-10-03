@@ -255,5 +255,39 @@ footer {
   }
 }
 
+/* Κρύβει το κουμπί και το mobile menu σε desktop */
+.menu-btn,
+.mobile-menu {
+  display: none;
+}
+
+/* Εμφανίζει μόνο σε κινητά */
+@media (max-width: 600px) {
+  .nav-bar-links {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+    padding: 32px 0 0 0;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+  .mobile-menu.open {
+    transform: translateX(0);
+  }
+}
+
 
 

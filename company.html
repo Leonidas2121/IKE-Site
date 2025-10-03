@@ -16,6 +16,9 @@
 
   <!-- Navbar -->
   <header class="navbar">
+     <button class="menu-btn" aria-label="Μενού" onclick="toggleMenu()">
+    &#9776;
+  </button>
     <nav aria-label="Κύρια πλοήγηση" class="nav-bar-links">
       <a href="index.html">Αρχική</a>
       <a class="active" href="company.html">Στοιχεία Εταιρείας</a>
@@ -120,5 +123,12 @@
       el.textContent = t.toLocaleDateString('el-GR',{day:'2-digit', month:'2-digit', year:'numeric'});
     }
   </script>
+
+   <script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+</script>
 </body>
 </html>
