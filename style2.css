@@ -267,7 +267,10 @@ footer {
     display: none;
   }
   .menu-btn {
-    display: block;
+   display: block;
+    position: static;
+    margin-left: 8px;
+    margin-right: 0;
   }
   .mobile-menu {
     display: flex;
@@ -287,6 +290,65 @@ footer {
   .mobile-menu.open {
     transform: translateX(0);
   }
+  .navbar {
+    background: none;
+    box-shadow: none;
+    height: 64px;
+    min-height: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .brand-center {
+    font-size: 20px;
+    padding-left: 0px;
+    margin-left: 12px;  
+    line-height: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    background: none;    
+    border-bottom: none; 
+  }
+  .mobile-menu a {
+  display: block;
+  margin: 12px 18px;
+  padding: 14px 0;
+  background: var(--bg);
+  color: var(--brand);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  font-size: 1.1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: background 0.2s, color 0.2s;
+}
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  background: var(--brand);
+  color: #fff;
+}
+ 
+}
+
+.close-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: var(--brand);
+  cursor: pointer;
+  z-index: 1002;
+  transition: color 0.2s;
+}
+.close-menu:hover {
+  color: #d32f2f;
 }
 
 
