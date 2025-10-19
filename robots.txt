@@ -1,0 +1,8 @@
+# robots.txt for https://lmanakainisi.gr/
+# Επιτρέπει σε όλες τις μηχανές αναζήτησης να διαβάσουν το site
+
+User-agent: *
+Allow: /
+
+# Σύνδεση με το sitemap
+Sitemap: https://lmanakainisi.gr/sitemap.xml
