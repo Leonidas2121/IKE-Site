@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Αρχική σελίδα -->
+  <url>
+    <loc>https://lmanakainisi.gr/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Στοιχεία Εταιρείας -->
+  <url>
+    <loc>https://lmanakainisi.gr/company.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Στοιχεία Εταίρων -->
+  <url>
+    <loc>https://lmanakainisi.gr/partners.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Δραστηριότητες -->
+  <url>
+    <loc>https://lmanakainisi.gr/activities.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
